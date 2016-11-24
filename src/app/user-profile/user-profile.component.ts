@@ -6,10 +6,10 @@ import { Component, OnInit, OnDestroy, Input, Output, EventEmitter } from '@angu
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent implements OnInit, OnDestroy {
-  @Input() 
+  @Input()
   nombre: string;
 
-  @Input() 
+  @Input()
   apellido: string;
 
   @Output() initialized = new EventEmitter();
@@ -18,12 +18,11 @@ export class UserProfileComponent implements OnInit, OnDestroy {
   constructor() { }
 
   ngOnInit() {
-    this.initialized.emit("Emitido " + Date.now());
+    this.initialized.emit('Emitido ' + Date.now());
   }
 
-  ngOnDestroy() 
-  {
-    console.log("Muero");
+  ngOnDestroy() {
+    console.log('Muero');
   }
 
 }
