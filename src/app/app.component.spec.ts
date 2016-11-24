@@ -3,7 +3,12 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
-import { LoggerService} from './logger.service';
+import { LoggerService } from './logger.service';
+
+class LoggerMock {
+    log(msg: string) {};
+    error(msg: string) {};
+}
 
 describe('App: Angular00', () => {
   beforeEach(() => {
@@ -11,7 +16,10 @@ describe('App: Angular00', () => {
       declarations: [
         AppComponent, UserProfileComponent
       ],
-      providers: [ LoggerService ]
+      providers: [
+        // LoggerService //Real service 
+        { provide: LoggerService, useClass: LoggerMock }, // Mocked one
+      ]
     });
   });
 
