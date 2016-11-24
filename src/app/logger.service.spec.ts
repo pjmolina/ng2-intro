@@ -10,7 +10,13 @@ describe('Service: Logger', () => {
     });
   });
 
-  it('should ...', inject([LoggerService], (service: LoggerService) => {
+  it('should instanciate', inject([LoggerService], (service: LoggerService) => {
     expect(service).toBeTruthy();
   }));
+
+  it('calling log() should work', inject([LoggerService], (service: LoggerService) => {
+    service.log('hola');
+  }));
+
+
 });

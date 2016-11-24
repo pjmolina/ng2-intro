@@ -6,7 +6,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { LoggerService } from './logger.service';
 
 class LoggerMock {
-    log(msg: string) {};
+    log(msg: string) { };
     error(msg: string) {};
 }
 
@@ -17,7 +17,7 @@ describe('App: Angular00', () => {
         AppComponent, UserProfileComponent
       ],
       providers: [
-        // LoggerService //Real service 
+        // LoggerService // Real service 
         { provide: LoggerService, useClass: LoggerMock }, // Mocked one
       ]
     });

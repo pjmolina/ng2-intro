@@ -25,4 +25,15 @@ describe('UserProfileComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+ it('should render Hola Jesica Alba', async(() => {
+    let fixture = TestBed.createComponent(UserProfileComponent);
+    component = fixture.componentInstance;
+    component.nombre = 'Jesica';
+    component.apellido = 'Alba';
+    fixture.detectChanges();
+    let compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('div').textContent).toContain('Hola Jesica Alba');
+  }));
+
 });
