@@ -1,5 +1,8 @@
 # Angular00
 
+Build status in TravisCI: [![Build Status](https://travis-ci.org/pjmolina/ng2-intro.svg?branch=master)](https://travis-ci.org/pjmolina/ng2-intro)
+
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.19-3.
 
 ## Development server
