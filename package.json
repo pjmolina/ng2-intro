@@ -6,6 +6,7 @@
   "scripts": {
     "start": "ng serve",
     "lint": "tslint \"src/**/*.ts\"",
+    "lint2file": "tslint src/**/*.ts -c tslint.json -o linter.log",
     "test": "ng test --watch false",
     "test-tdd": "ng test --watch true",
     "test-cov": "ng test --code-coverage --watch false",
