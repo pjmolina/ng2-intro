@@ -11,7 +11,9 @@
     "test-cov": "ng test --code-coverage --watch false",
     "test-teamcity": "ng test --code-coverage --watch false --browsers=PhantomJS --reporters=teamcity",
     "pree2e": "webdriver-manager update",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "build": "ng build --prod",
+    "build-aot": "ng build --prod --aot"    
   },
   "private": true,
   "dependencies": {
