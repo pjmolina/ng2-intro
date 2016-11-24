@@ -3,6 +3,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { LoggerService} from './logger.service';
 
 describe('App: Angular00', () => {
   beforeEach(() => {
@@ -10,6 +11,7 @@ describe('App: Angular00', () => {
       declarations: [
         AppComponent, UserProfileComponent
       ],
+      providers: [ LoggerService ]
     });
   });
 
